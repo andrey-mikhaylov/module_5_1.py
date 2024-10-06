@@ -1,3 +1,53 @@
+class House:
+    def __init__(self, name, floors):
+        self.name = name
+        self.number_of_floors = floors
+
+    def go_to(self, new_floor):
+        if new_floor > self.number_of_floors or new_floor < 1:
+            print("Такого этажа не существует")
+            return
+
+        print(new_floor)
+
+
+def test():
+    h1 = House('ЖК Горский', 18)
+    h2 = House('Домик в деревне', 2)
+    h1.go_to(5)
+    h2.go_to(10)
+    """
+    Вывод на консоль:
+    1
+    2
+    3
+    4
+    5
+    "Такого этажа не существует"
+    """
+
+def main():
+    h1 = House('пещера', -2)
+    h1.go_to(0)
+    h1.go_to(-1)
+    h1.go_to(-2)
+    h1.go_to(-3)
+
+    h2 = House('_______________', 0)
+    h2.go_to(1)
+    h2.go_to(0)
+    h2.go_to(-1)
+    h2.go_to(-100)
+
+    h3 = House('', 2)
+    h3.go_to(0)
+    h3.go_to(1)
+    h3.go_to(2)
+    h3.go_to(3)
+
+
+test()
+#main()
 
 
 """
